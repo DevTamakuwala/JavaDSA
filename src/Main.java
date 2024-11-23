@@ -1,20 +1,23 @@
-import Stack.Stack;
+import HashTable.HashTable;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Stack stack = new Stack(2);
-        stack.push(5);
-        stack.push(5);
+        HashTable hashTable = new HashTable();
 
-        stack.printStack();
+        hashTable.set("nails", 100);
+        hashTable.set("tile", 50);
+        hashTable.set("lumber", 80);
+
+        hashTable.set("bolts", 200);
+        hashTable.set("screws", 140);
+
+        hashTable.printTable();
         System.out.println();
-        stack.pop();
+        System.out.println(hashTable.get("tile"));
 
-        stack.push(8);
-        stack.push(12);
+        System.out.println(hashTable.keys());
 
-        stack.printStack();
     }
 }
